@@ -6,64 +6,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Formulario de Contacto</h2>
-    <form id="formulario">
-      <div class="grid">
-        <div><label>Fecha</label><input type="date" id="fecha" required /></div>
-        <div><label>Nombre y Apellido</label><input type="text" id="nombre" required /></div>
-        <div><label>Edad</label><input type="number" id="edad" required /></div>
-        <div>
-          <label>Interesado en</label>
-          <select id="interes">
-            <option value="Odonto">Odonto</option>
-            <option value="Prepaga">Prepaga</option>
-            <option value="Odonto/Prepaga">Odonto/Prepaga</option>
-          </select>
-        </div>
-        <div>
-          <label>Cápitas</label>
-          <input type="number" id="capitas" min="0" placeholder="Ingrese número" required />
-        </div>
-        <div><label>Ciudad</label><input type="text" id="ciudad" required /></div>
-        <div><label>Teléfono</label><input type="tel" id="telefono" required /></div>
-        <div>
-          <label>Horario de contacto</label>
-          <select id="horario">
-            <option value="Mañana (9 a 12 hs)">Mañana (9 a 12 hs)</option>
-            <option value="Tarde (12 a 17 hs)">Tarde (12 a 17 hs)</option>
-            <option value="Noche (17 a 20 hs)">Noche (17 a 20 hs)</option>
-          </select>
-        </div>
-        <div>
-          <label>Asesora</label>
-          <select id="asesora">
-            <option value="Cecilia">Cecilia</option>
-            <option value="Marina">Marina</option>
-          </select>
-        </div>
-        <div style="grid-column: 1 / span 2;">
-          <label>Observaciones</label>
-          <textarea id="observaciones" rows="3" placeholder="Escriba aquí..."></textarea>
-        </div>
-      </div>
-      <div class="actions">
-        <button type="button" id="agregar">Agregar</button>
-        <button type="button" id="descargar">Descargar</button>
-        <button type="reset" id="limpiar">Limpiar</button>
-      </div>
-    </form>
+  <h1>Formulario de Contacto</h1>
 
-    <div class="list-card">
-      <h3>Registros</h3>
-      <ul id="lista"></ul>
-    </div>
+  <form id="contactForm">
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha">
 
-    <div class="qr-card">
-      <h3>QR para compartir</h3>
-      <div id="qrcode"></div>
-    </div>
-  </div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad">
+
+    <label for="observaciones">Observaciones:</label>
+    <textarea id="observaciones" name="observaciones"></textarea>
+
+    <button type="button" id="btnAgregar">Agregar</button>
+    <button type="button" id="btnDescargar">Descargar</button>
+    <button type="reset">Limpiar</button>
+  </form>
+
+  <h2>Registros</h2>
+  <ul id="listaRegistros"></ul>
+
+  <h2>QR para compartir</h2>
+  <div id="qrcode"></div>
 
   <!-- Librerías externas -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>

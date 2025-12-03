@@ -1,41 +1,50 @@
-# Formulario de Contacto
+# Formulario de Carga de Datos
 
-Este proyecto es un formulario web que permite:
-
-- Registrar datos de contacto: **Fecha, Nombre, Edad, Interés, Cápitas, Ciudad, Teléfono, Horario, Asesora y Observaciones**.
-- Guardar múltiples registros en una lista visible en pantalla.
-- Descargar los registros en un archivo **Excel (.xlsx)** con encabezados en **mayúsculas y negrita**.
-- Generar un **código QR** con la URL pública del formulario (GitHub Pages).
+Este proyecto permite registrar información de contactos, guardar múltiples entradas, exportarlas a Excel y compartir el formulario mediante un código QR.
 
 ---
 
 ## 🚀 Cómo usar
 
-1. Abrir el formulario en el navegador.
-2. Completar los campos y presionar **Agregar** para guardar un registro.
-3. Presionar **Descargar** para exportar todos los registros a Excel y ver el QR.
-4. Escanear el QR para acceder al formulario desde otro dispositivo.
+1. Abrir el formulario en el navegador desde la URL pública:  
+   **https://sat1t953.github.io/formulario-carga-de-datos/**
+2. Completar los campos requeridos:
+   - Fecha (se carga automáticamente con el día de hoy).
+   - Nombre.
+   - Edad.
+   - Observaciones.
+3. Presionar **Agregar** para guardar un registro en la lista.
+4. Presionar **Descargar** para exportar todos los registros a un archivo Excel (`registros.xlsx`) y generar el código QR.
+5. Escanear el QR para acceder al formulario desde otro dispositivo.
+
+---
+
+## 📂 Archivos principales
+
+- `index.html` → Página principal con el formulario.
+- `style.css` → Estilos visuales del formulario.
+- `script.js` → Lógica de registros, exportación a Excel y generación de QR.
+- `README.md` → Este documento con instrucciones.
 
 ---
 
 ## 📦 Librerías externas utilizadas
 
-El proyecto utiliza las siguientes librerías externas (cargadas desde CDN):
-
-- [xlsx](https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js) → generación de archivos Excel.
-- [FileSaver.js](https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js) → descarga de archivos.
-- [qrcodejs](https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js) → generación de códigos QR.
+- **xlsx** → Generación de archivos Excel.  
+- **FileSaver.js** → Descarga de archivos en el navegador.  
+- **qrcodejs** → Generación de códigos QR.
 
 ---
 
-## 🌐 Publicación en GitHub Pages
+## 👥 Uso en equipos de asesores
 
-El formulario se puede publicar en GitHub Pages:
+- Cada asesor puede abrir la URL pública y cargar datos desde su dispositivo.  
+- Los registros se exportan en un Excel con encabezados en mayúsculas y negrita.  
+- El QR facilita el acceso rápido al formulario sin necesidad de escribir la URL.  
 
-1. Ir a **Settings** del repositorio.
-2. En la sección **Pages**, seleccionar:
-   - **Source**: `Deploy from a branch`.
-   - **Branch**: `main` y carpeta `/root`.
-3. Guardar los cambios.
+---
 
-La URL pública será:
+## 🛠 Mantenimiento
+
+- Para actualizar el formulario, modificar los archivos `index.html`, `style.css` o `script.js` en la rama `main`.  
+- Confirmar los cambios con **Commit changes** para que se reflejen automáticamente en GitHub Pages.  
